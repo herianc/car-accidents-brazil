@@ -29,11 +29,7 @@ if 'data' not in st.session_state:
     df['mes'] = df['data_inversa'].dt.month
     # Selecionando os dados que não serão utilizados
     
-    drop_cols = ['horario', 'ignorados', 'regional', 'delegacia']
-    df = df.drop(columns=drop_cols)
-    
     st.session_state['data'] = df
-
 
 
 st.logo('images/logo_ufrj.png', size='large')
