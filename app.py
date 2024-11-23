@@ -21,18 +21,15 @@ pages = {
 }
 
 if 'data' not in st.session_state:
-    df = pd.read_csv('acidentes_brasil.csv')
+    df = pd.read_csv('acidentes_brasil_cleaned.csv')
     
     df['data_inversa'] = pd.to_datetime(df['data_inversa'])
     # Criando a coluna de mês e ano
     df['ano'] = df['data_inversa'].dt.year
-    df['mes'] = df['data_inversa'].dt.month
     # Selecionando os dados que não serão utilizados
     
     st.session_state['data'] = df
 
-
-st.logo('images/logo_ufrj.png', size='large')
     
 pg = st.navigation(pages)
 pg.run()
