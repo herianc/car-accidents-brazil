@@ -13,7 +13,7 @@ estado = st.sidebar.selectbox('Estado', estados)
 
 df_filtered = df.query('uf == @estado')
 
-anos = [2017, 2018, 2019, 2020, 2021, 2022]
+anos = [2018, 2019, 2020, 2021, 2022]
 ano = st.sidebar.selectbox('Ano', anos)
 
 df_filtered = df_filtered.query('uf == @estado and ano == @ano')
