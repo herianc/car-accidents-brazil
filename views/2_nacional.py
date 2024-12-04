@@ -12,7 +12,6 @@ COLOR = '#BD93F9'
 df = st.session_state['data']
 
 # Botões laterais para filtragem 
-
 anos = [2017, 2018, 2019, 2020, 2021, 2022]
 ano = st.sidebar.selectbox('Ano', anos)
 

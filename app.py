@@ -21,7 +21,7 @@ pages = {
 }
 
 if 'data' not in st.session_state:
-    df = pd.read_csv('acidentes_brasil.csv')
+    df = pd.read_csv('acidentes_brasil_cleaned.csv')
     
     df['data_inversa'] = pd.to_datetime(df['data_inversa'])
     # Criando a coluna de mês e ano

@@ -9,18 +9,18 @@ df = st.session_state['data']
 
 # Botões laterais para filtragem 
 estados = df['uf'].sort_values().unique()
-estado = st.sidebar.selectbox('Estados', estados)
+estado = st.sidebar.selectbox('Estado', estados)
 
 df_filtered = df.query('uf == @estado')
 
 anos = [2017, 2018, 2019, 2020, 2021, 2022]
 ano = st.sidebar.selectbox('Ano', anos)
 
-st.subheader(f'Dados de {estado} de {ano}')
-
 df_filtered = df_filtered.query('uf == @estado and ano == @ano')
 
- # Primeira linha
+st.image(df_filtered.iloc[0]["uf_img"])
+
+# Primeira linha
 col11, col12, col13 = st.columns([1,3,1])
 
 with col11:
@@ -51,7 +51,7 @@ with col21:
               
 with col22:
     with st.container(border=True, height=383):
-        st.subheader('Acidentes por municípios')
+        st.subheader('Acidentes por município')
         st.table(df_filtered['municipio'].value_counts().rename('Acidentes'))
 
 
