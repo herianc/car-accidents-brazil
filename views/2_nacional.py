@@ -69,8 +69,6 @@ with col22:
         hide_index=True)
                     
 
-
-
 # Terceira linha
 col31, col32, col33 = st.columns(3)
 

@@ -18,20 +18,18 @@ de Ciência da Computação da Universidade Federal do Rio de Janeiro.
             
 """)
 
-
-
 sidecol1, sidecol2 = st.sidebar.columns(2)
 
 with sidecol1:
-    st.image('images/logo_ufrj.png', width=100)
+    st.image('assets/logo_ufrj.png', width=100)
     
 with sidecol2:
-    st.image('images/logo_dcc.png', width=150)
+    st.image('assets/logo_dcc.png', width=150)
     
 # Centralizando a imagem
 col1, col2, col3 = st.columns([1,2,1])
 
 with col2:
-    st.image('images/acidente_carro.jpg', 
+    st.image('assets/acidente_carro.jpg', 
             caption='📷️: Marcelo Ferreira/Correio Braziliense',
             width=550)
